@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+dist/
+coverage/
+.env
+bin/
+obj/
+.vscode
+*/appsettings.json

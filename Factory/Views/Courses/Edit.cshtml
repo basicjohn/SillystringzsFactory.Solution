@@ -1,0 +1,35 @@
+@{
+  Layout = "_Layout";
+}
+
+@model UniversityRegistrar.Models.Course
+<main class="container">
+
+  <h2>Edit</h2>
+
+  <h4>Edit this course: @Html.DisplayFor(model => model.CourseName)</h4>
+
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.CourseId)
+
+    @Html.LabelFor(model => model.CourseName)
+    @Html.EditorFor(model => model.CourseName)
+
+    @Html.LabelFor(model => model.CourseNumber)
+    @Html.TextBoxFor(model => model.CourseNumber)
+
+    @Html.LabelFor(model => model.Description)
+    @Html.TextBoxFor(model => model.Description)
+
+    @Html.LabelFor(model => model.CourseSchedule)
+    @Html.TextBoxFor(model => model.CourseSchedule)
+
+    @Html.LabelFor(model => model.TeacherName)
+    @Html.TextBoxFor(model => model.TeacherName)
+
+    <input type="submit" value="Save" />
+  }
+  <a href='@Url.Action("Index", "Course")' role="button" class="btn btn-warning">Back to courses</a>
+  <p>@Html.ActionLink("Back to list", "Index")</p>
+</main>

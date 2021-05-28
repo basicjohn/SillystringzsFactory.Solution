@@ -1,0 +1,153 @@
+body {
+  background-color: rgb(238, 238, 238);
+}
+
+hr {
+  border-color: #323232;
+  border-style: dotted;
+}
+
+/* Header Styles */
+
+header {
+  background-color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+header h1.page-title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 1000;
+  color: forestgreen;
+  width: 40%;
+  display: inline;
+  line-height: 40px;
+}
+
+header ul {
+  list-style-type: none;
+  display: block;
+  float: right;
+}
+
+header ul li {
+  float: left;
+  padding: 0px;
+}
+
+header ul li a {
+  color: #323232;
+  font-weight: 700;
+  height: 50px;
+}
+
+header ul li a:hover {
+  color: forestgreen;
+  height: 50px;
+}
+
+/* Main Styles */
+main {
+  padding-top: 25px;
+}
+
+/* Detail Page Styles */
+
+.course-details {
+  border-color: #fff;
+  border-style: double;
+  border-width: 2px;
+  padding: 25px;
+  margin-bottom: 15px;
+}
+
+.course-details h2 {
+  font-size: 48px;
+  margin: 0px;
+  line-height: 60px;
+}
+
+.course-details h3 {
+  margin: 0px;
+}
+
+.course-details p {
+  line-height: 18px;
+}
+
+.student-details {
+  margin: 0px 0px 25px 0px;
+  overflow: scroll;
+  max-height: 300px;
+}
+
+.student-details .col-md-3 {
+  border-color: rgb(238, 238, 238);
+  border-style: solid;
+  border-width: 3px;
+  padding: 20px;
+}
+
+.student-details .col-md-3:nth-of-type(even) {
+  background-color: #fff;
+}
+
+.student-details .col-md-3:nth-of-type(even):hover {
+  background-color: rgb(182, 182, 182);
+}
+
+.student-details .col-md-3:nth-of-type(odd) {
+  background-color: rgb(182, 182, 182);
+}
+.student-details .col-md-3:nth-of-type(odd):hover {
+  background-color: #fff;
+}
+
+.student-details h2,
+.student-details h3 {
+  margin: 0px;
+}
+
+.student-details h4 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 36px;
+  background-color: #323232;
+  text-align: left;
+  width: 70%;
+  padding: 15px;
+}
+
+.student-details .col-md-3 h2 span.content,
+.student-details .col-md-3 h3 span.content {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: right;
+}
+
+.student-details .col-md-3 h2 span.title,
+.student-details .col-md-3 h3 span.title {
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Footer Styles */
+div#footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  color: #ccc;
+  background: #333;
+  padding: 8px;
+}
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}

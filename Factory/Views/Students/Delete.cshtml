@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@model UniversityRegistrar.Models.Student
+<main class="container">
+
+  <h2>Are you sure you want to delete this?</h2>
+
+  @Html.DisplayNameFor(model => model.StudentName): @Html.DisplayFor(model => model.StudentName)
+  @using (Html.BeginForm())
+  {
+    <input type="submit" value="Delete" />
+  }
+  <a href='@Url.Action("Index", "Students")' role="button" class="btn btn-warning">Back to Enrolled Students</a>
+  @* @Html.ActionLink("Back to Enrolled Students", "Index") *@
+</main>

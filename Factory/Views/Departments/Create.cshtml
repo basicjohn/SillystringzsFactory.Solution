@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@model UniversityRegistrar.Models.Department
+<main class="container">
+  <h4>Add a new Department</h4>
+
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.DepartmentName)
+    @Html.TextBoxFor(model => model.DepartmentName, new { required = "required" })
+
+    @Html.LabelFor(model => model.Description)
+    @Html.TextBoxFor(model => model.Description, new { required = "required" })
+
+    @Html.LabelFor(model => model.DeanName)
+    @Html.TextBoxFor(model => model.DeanName, new { required = "required" })
+
+    @Html.LabelFor(model => model.ContactInfo)
+    @Html.TextBoxFor(model => model.ContactInfo, new { required = "required" })
+
+    @* Need to add a dropdown or checkbox input for selecting courses to add. *@
+
+    <input type="submit" value="Add new Department" />
+  }
+  <p>@Html.ActionLink("Show all Departments", "Index")</p>
+</main>

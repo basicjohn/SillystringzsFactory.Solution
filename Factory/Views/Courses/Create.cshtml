@@ -1,0 +1,32 @@
+@{
+  Layout = "_Layout";
+}
+
+@model UniversityRegistrar.Models.Course
+<main class="container">
+  <h4>Add a new course</h4>
+
+  @using (Html.BeginForm())
+  {
+    @Html.Label("Select Department")
+    @Html.DropDownList("DepartmentId")
+
+    @Html.LabelFor(model => model.CourseName)
+    @Html.TextBoxFor(model => model.CourseName)
+
+    @Html.LabelFor(model => model.CourseNumber)
+    @Html.TextBoxFor(model => model.CourseNumber)
+
+    @Html.LabelFor(model => model.Description)
+    @Html.TextBoxFor(model => model.Description)
+
+    @Html.LabelFor(model => model.CourseSchedule)
+    @Html.TextBoxFor(model => model.CourseSchedule)
+
+    @Html.LabelFor(model => model.TeacherName)
+    @Html.TextBoxFor(model => model.TeacherName)
+    <input type="submit" value="Add new course" />
+  }
+  <a href='@Url.Action("Index", "Courses")' role="button" class="btn btn-warning">Back to courses</a>
+  @* <p>@Html.ActionLink("Show all courses", "Index")</p> *@
+</main>

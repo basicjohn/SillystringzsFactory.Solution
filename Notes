@@ -1,0 +1,26 @@
+Department index
+• Option to add department (Complete)
+
+
+Course Create page
+• Option to add Departments in the form (displays in view but not working in the controller)
+
+Departments Detail page
+• view all courses in department (complete)
+• Option to remove department (complete)
+• Option to edit (complete)
+• Option to add class to existing department (complete)
+
+
+
+
+
+
+Potentially out of Project Scope
+
+Course Index Page
+• Sort Course listings by department
+
+Department Create page
+• (possibility) Checklist to add multiple courses at once
+

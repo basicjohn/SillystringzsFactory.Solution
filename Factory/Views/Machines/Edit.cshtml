@@ -1,0 +1,30 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+<main class="container">
+
+  <h2>Edit</h2>
+
+  <h4>Edit this task: @Html.DisplayFor(model => model.MachineName)</h4>
+
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.MachineId)
+
+    @Html.LabelFor(model => model.MachineName)
+    @Html.EditorFor(model => model.MachineName,
+  new { required = "required" })
+
+    @Html.Label("Select engineer")
+    @Html.DropDownList("EngineerId")
+
+    @Html.LabelFor(model => model.DateOfEnrollment)
+    @Html.EditorFor(model => model.DateOfEnrollment,
+  new { @type = "date" , @value = "model.DateOfEnrollment.Value.ToShortDateString()" })
+
+    <input type="submit" value="Save" class="btn btn-default" />
+  }
+  <a href='@Url.Action("Index","Machines")' role="button" class="btn btn-warning">Back to Enrolled Machines</a>
+</main>

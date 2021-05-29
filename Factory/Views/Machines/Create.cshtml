@@ -1,16 +1,16 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 <main class="container">
 
-  @model Factory.Models.Student
+  @model Factory.Models.Machine
 
-  <h4>Enroll new student</h4>
+  <h4>Enroll new machine</h4>
 
   @using (Html.BeginForm())
   {
-    @Html.LabelFor(model => model.StudentName)
-    @Html.TextBoxFor(model => model.StudentName,
+    @Html.LabelFor(model => model.MachineName)
+    @Html.TextBoxFor(model => model.MachineName,
   new { required = "required" })
 
     @Html.Label("Select course")
@@ -22,5 +22,5 @@
 
     <input type="submit" value="Enroll" class="btn btn-default" />
   }
-  <a href='@Url.Action("Index", "Students")' role="button" class="btn btn-warning">Back to Students</a>
-</main> *@
+  <a href='@Url.Action("Index", "Machines")' role="button" class="btn btn-warning">Back to Machines</a>
+</main>

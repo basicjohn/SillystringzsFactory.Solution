@@ -1,0 +1,31 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+<main class="container">
+  <h4>Add a new engineer</h4>
+
+  @using (Html.BeginForm())
+  {
+    @Html.Label("Select Department")
+    @Html.DropDownList("DepartmentId")
+
+    @Html.LabelFor(model => model.EngineerName)
+    @Html.TextBoxFor(model => model.EngineerName)
+
+    @Html.LabelFor(model => model.EngineerNumber)
+    @Html.TextBoxFor(model => model.EngineerNumber)
+
+    @Html.LabelFor(model => model.Description)
+    @Html.TextBoxFor(model => model.Description)
+
+    @Html.LabelFor(model => model.EngineerSchedule)
+    @Html.TextBoxFor(model => model.EngineerSchedule)
+
+    @Html.LabelFor(model => model.TeacherName)
+    @Html.TextBoxFor(model => model.TeacherName)
+    <input type="submit" value="Add new engineer" />
+  }
+  <a href='@Url.Action("Index", "Engineers")' role="button" class="btn btn-warning">Back to Engineers</a>
+</main>

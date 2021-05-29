@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+<main class="container">
+
+  <h2>Are you sure you want to delete this?</h2>
+
+  <p>@Html.DisplayNameFor(model => model.EngineerName): @Html.DisplayFor(model => model.EngineerName)
+    @using (Html.BeginForm())
+    {
+      <input type="submit" value="Delete" />
+    }
+    <a href='@Url.Action("Index", "Engineers")' role="button" class="btn btn-warning">Back to engineers</a>
+    @* @Html.ActionLink("Back to List", "Index")
+      </main>

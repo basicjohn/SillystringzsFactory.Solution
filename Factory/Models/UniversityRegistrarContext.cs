@@ -1,16 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace UniversityRegistrar.Models
+namespace Factory.Models
 {
-  public class UniversityRegistrarContext : DbContext
+  public class FactoryContext : DbContext
   {
-    public virtual DbSet<Course> Courses { get; set; }
-    public DbSet<Student> Students { get; set; }
-    public virtual DbSet<Department> Departments { get; set; }
-    public DbSet<CourseDepartment> CourseDepartment { get; set; }
-    public DbSet<CourseStudent> CourseStudent { get; set; }
+    public virtual DbSet<Engineer> Engineers { get; set; }
+    public DbSet<Machine> Machines { get; set; }
+    public DbSet<EngineerMachine> CourseStudent { get; set; }
 
-    public UniversityRegistrarContext(DbContextOptions options) : base(options) { }
+    public FactoryContext(DbContextOptions options) : base(options) { }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

@@ -1,9 +1,9 @@
-@{
+@* @{
   Layout = "_Layout";
-}
+  }
 
-@model UniversityRegistrar.Models.Student
-<main class="container">
+  @model UniversityRegistrar.Models.Student
+  <main class="container">
 
   <h2>Student Details</h2>
   <hr />
@@ -11,32 +11,28 @@
 
   @if (@Model.JoinEntities1.Count == 0)
   {
-    <p>This student is not enrolled in any courses.</p>
+  <p>This student is not enrolled in any courses.</p>
   }
   else
   {
-    <h4>Courses the student is enrolled in:</h4>
-    <ul>
-      @foreach (var join in Model.JoinEntities1)
-      {
-        <li>@join.Course.CourseName</li>
-        @using (Html.BeginForm("DeleteCourse", "Students"))
-        {
-          @Html.Hidden("joinId", @join.CourseStudentId)
-          <input type="submit" value="Delete" />
-        }
-      }
-    </ul>
+  <h4>Courses the student is enrolled in:</h4>
+  <ul>
+  @foreach (var join in Model.JoinEntities1)
+  {
+  <li>@join.Course.CourseName</li>
+  @using (Html.BeginForm("DeleteCourse", "Students"))
+  {
+  @Html.Hidden("joinId", @join.CourseStudentId)
+  <input type="submit" value="Delete" />
+  }
+  }
+  </ul>
   }
   <a href='@Url.Action("AddCourse", "Students", new { id = Model.StudentId })' role="button" class="btn btn-warning">Add
-    a Course</a>
-  @* <p>@Html.ActionLink("Add a Course", "AddCourse", new { id = Model.StudentId })</p> *@
+  a Course</a>
   <a href='@Url.Action("Index", "Students")' role="button" class="btn btn-warning">Back to Students</a>
-  @* <p>@Html.ActionLink("Back to list", "Index")</p> *@
   <a href='@Url.Action("Edit","Students", new { id = Model.StudentId })' role="button" class="btn btn-warning">Edit
-    Student</a>
-  @* <p>@Html.ActionLink("Edit Student", "Edit", new { id = Model.StudentId })</p> *@
+  Student</a>
   <a href='@Url.Action("Delete","Students", new { id = Model.StudentId })' role="button" class="btn btn-warning">Delete
-    Student</a>
-  @* <p>@Html.ActionLink("Delete Student", "Delete", new { id = Model.StudentId })</p> *@
-</main>
+  Student</a>
+  </main> *@

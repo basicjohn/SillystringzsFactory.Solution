@@ -1,17 +1,17 @@
 // using Microsoft.AspNetCore.Mvc.Rendering;
 // using Microsoft.EntityFrameworkCore;
 // using Microsoft.AspNetCore.Mvc;
-// using UniversityRegistrar.Models;
+// using Factory.Models;
 // using System.Collections.Generic;
 // using System.Linq;
 
-// namespace UniversityRegistrar.Controllers
+// namespace Factory.Controllers
 // {
 //   public class StudentsController : Controller
 //   {
-//     private readonly UniversityRegistrarContext _db;
+//     private readonly FactoryContext _db;
 
-//     public StudentsController(UniversityRegistrarContext db)
+//     public StudentsController(FactoryContext db)
 //     {
 //       _db = db;
 //     }

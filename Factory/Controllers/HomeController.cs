@@ -1,6 +1,6 @@
 // using Microsoft.AspNetCore.Mvc;
 
-// namespace UniversityRegistrar.Controllers
+// namespace Factory.Controllers
 // {
 //     public class HomeController : Controller
 //     {

@@ -8,12 +8,9 @@
     <h2>Engineer Details</h2>
     <hr />
     <h3>@Html.DisplayNameFor(model => model.EngineerName): @Html.DisplayFor(model => model.EngineerName) |
-      @Html.DisplayFor(model => model.EngineerNumber)</h3>
+      @Html.DisplayFor(model => model.EmploymentStartDate)</h3>
     @Html.HiddenFor(model => model.EngineerId)
 
-    <p>@Html.DisplayFor(model => model.Description)<br>
-      @Html.DisplayFor(model => model.EngineerSchedule)<br>
-      @Html.DisplayFor(model => model.TeacherName)</p>
   </div>
   <div class="row machine-details">
 
@@ -28,9 +25,16 @@
 
       @foreach (var join in Model.JoinEntities)
       {
-        <div class="col-md-3">
+        <div class="col-md-12">
           <h2><span class="title">Name:</span> <span class="content">@join.Machine.MachineName</span></h2>
           <h3><span class="title">Id Number:</span> <span class="content">@join.Machine.MachineId</span></h3>
+          <h3><span class="title">Date of Installation:</span> <span class="content">@join.Machine.InstallDate</span></h3>
+          <h3><span class="title">Hours in Operation:</span> <span class="content">@join.Machine.HoursOperated</span></h3>
+          <h3><span class="title">Date of Last Inspection:</span> <span class="content">@join.Machine.LastInspection</span>
+          </h3>
+          <h3><span class="title">Inspection Cycle:</span> <span class="content">@join.Machine.InspectionCycle</span></h3>
+
+          <p>@join.Machine.MachineDescription</p>
         </div>
       }
     }

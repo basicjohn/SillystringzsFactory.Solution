@@ -13,17 +13,14 @@
   {
     @Html.HiddenFor(model => model.EngineerId)
 
+    @* @Html.Label("Select Department")
+      @Html.DropDownList("DepartmentId") *@
+
     @Html.LabelFor(model => model.EngineerName)
-    @Html.EditorFor(model => model.EngineerName)
+    @Html.TextBoxFor(model => model.EngineerName)
 
-    @Html.LabelFor(model => model.EngineerNumber)
-    @Html.TextBoxFor(model => model.EngineerNumber)
-
-    @Html.LabelFor(model => model.Description)
-    @Html.TextBoxFor(model => model.Description)
-
-    @Html.LabelFor(model => model.EngineerSchedule)
-    @Html.TextBoxFor(model => model.EngineerSchedule)
+    @Html.LabelFor(model => model.EmploymentStartDate)
+    @Html.TextBoxFor(model => model.EmploymentStartDate)
 
     <input type="submit" value="Save" />
   }

@@ -13,12 +13,32 @@
     @Html.TextBoxFor(model => model.MachineName,
   new { required = "required" })
 
-    @Html.Label("Select engineer")
-    @Html.DropDownList("CourseId")
+    @Html.LabelFor(model => model.MachineDescription)
+    @Html.TextBoxFor(model => model.MachineDescription,
+  new { required = "required" })
 
-    @Html.LabelFor(model => model.DateOfEnrollment)
-    @Html.TextBoxFor(model => model.DateOfEnrollment,
-  new { @type = "date" , @value = DateTime.Today })
+
+    @Html.LabelFor(model => model.InstallDate)
+    @Html.TextBoxFor(model => model.InstallDate,
+  new
+  {
+  @type = "date" , @value = DateTime.Today })
+
+    @Html.LabelFor(model => model.HoursOperated)
+    @Html.TextBoxFor(model => model.HoursOperated,
+  new { required = "required" })
+
+    @Html.LabelFor(model => model.LastInspection)
+    @Html.TextBoxFor(model => model.LastInspection,
+  new
+  {
+  @type
+  = "date" , @value = DateTime.Today })
+
+    @Html.LabelFor(model => model.InspectionCycle)
+    @Html.TextBoxFor(model => model.InspectionCycle,
+  new { required = "required" })
+
 
     <input type="submit" value="Enroll" class="btn btn-default" />
   }

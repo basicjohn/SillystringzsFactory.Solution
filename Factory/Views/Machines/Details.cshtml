@@ -7,17 +7,29 @@
 
   <h2>Machine Details</h2>
   <hr />
-  <h3>@Html.DisplayNameFor(model => model.MachineName): @Html.DisplayFor(model => model.MachineName)</h3>
+  <h2><span class="title">Name:</span> <span class="content">@Html.DisplayFor(model => model.MachineName)</span></h2>
+  <h3><span class="title">Id Number:</span> <span class="content">@Html.DisplayFor(model => model.MachineId)</span></h3>
+  <h3><span class="title">Date of Installation:</span> <span class="content">@Html.DisplayFor(model =>
+      model.InstallDate)</span></h3>
+  <h3><span class="title">Hours in Operation:</span> <span class="content">@Html.DisplayFor(model =>
+      model.HoursOperated)</span></h3>
+  <h3><span class="title">Date of Last Inspection:</span> <span class="content">@Html.DisplayFor(model =>
+      model.LastInspection)</span>
+  </h3>
+  <h3><span class="title">Inspection Cycle:</span> <span class="content">@Html.DisplayFor(model =>
+      model.InspectionCycle)</span></h3>
 
-  @if (@Model.JoinEntities1.Count == 0)
+  <p>@Html.DisplayFor(model => model.MachineDescription)</p>
+
+  @if (@Model.JoinEntities.Count == 0)
   {
     <p>This machine is not enrolled in any engineers.</p>
   }
   else
   {
-    <h4>Engineers the machine is enrolled in:</h4>
+    <h4>Engineers certified to :</h4>
     <ul>
-      @foreach (var join in Model.JoinEntities1)
+      @foreach (var join in Model.JoinEntities)
       {
         <li>@join.Engineer.EngineerName</li>
         @using (Html.BeginForm("DeleteEngineer", "Machines"))

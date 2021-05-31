@@ -14,16 +14,34 @@
     @Html.HiddenFor(model => model.MachineId)
 
     @Html.LabelFor(model => model.MachineName)
-    @Html.EditorFor(model => model.MachineName,
+    @Html.TextBoxFor(model => model.MachineName,
   new { required = "required" })
 
-    @Html.Label("Select engineer")
-    @Html.DropDownList("EngineerId")
+    @Html.LabelFor(model => model.MachineDescription)
+    @Html.TextBoxFor(model => model.MachineDescription,
+  new { required = "required" })
 
-    @Html.LabelFor(model => model.DateOfEnrollment)
-    @Html.EditorFor(model => model.DateOfEnrollment,
-  new { @type = "date" , @value = "model.DateOfEnrollment.Value.ToShortDateString()" })
 
+    @Html.LabelFor(model => model.InstallDate)
+    @Html.TextBoxFor(model => model.InstallDate,
+  new
+  {
+  @type = "date" , @value = DateTime.Today })
+
+    @Html.LabelFor(model => model.HoursOperated)
+    @Html.TextBoxFor(model => model.HoursOperated,
+  new { required = "required" })
+
+    @Html.LabelFor(model => model.LastInspection)
+    @Html.TextBoxFor(model => model.LastInspection,
+  new
+  {
+  @type
+  = "date" , @value = DateTime.Today })
+
+    @Html.LabelFor(model => model.InspectionCycle)
+    @Html.TextBoxFor(model => model.InspectionCycle,
+  new { required = "required" })
     <input type="submit" value="Save" class="btn btn-default" />
   }
   <a href='@Url.Action("Index","Machines")' role="button" class="btn btn-warning">Back to Enrolled Machines</a>

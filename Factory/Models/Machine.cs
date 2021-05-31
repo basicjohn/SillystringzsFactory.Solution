@@ -9,6 +9,7 @@ namespace Factory.Models
     public Machine()
     {
       this.JoinEntities = new HashSet<EngineerMachine>();
+
     }
 
     public int MachineId { get; set; }
@@ -29,7 +30,7 @@ namespace Factory.Models
     public DateTime LastInspection { get; set; }
 
     [Display(Name = "Inspection Cycle")]
-    public string InspectionCycle { get; set; }
+    public string InspectionCycle { get; set; } = "6 months";
 
 
 

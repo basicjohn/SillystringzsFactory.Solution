@@ -41,13 +41,10 @@
   </div>
   <div class="row sheparding-buttons">
     <a href='@Url.Action("Index", "Home", new {@class="btn"})' role="button" class="btn btn-warning">Home</a>
-    <p>@Html.ActionLink("Back to engineers", "Index", new {@class="btn"})</p>
     <a href='@Url.Action("Edit", "Engineers", new { id = Model.EngineerId })' role="button" class="btn btn-warning">Edit
       engineer</a>
-    <p>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</p>
     <a href='@Url.Action("Delete", "Engineers", new { id = Model.EngineerId })' role="button"
       class="btn btn-warning">Delete
       engineer</a>
-    <p>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</p>
   </div>
 </main>

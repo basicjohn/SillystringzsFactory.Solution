@@ -54,7 +54,7 @@ main {
 
 /* Detail Page Styles */
 
-.course-details {
+.engineer-details {
   border-color: #fff;
   border-style: double;
   border-width: 2px;
@@ -62,54 +62,54 @@ main {
   margin-bottom: 15px;
 }
 
-.course-details h2 {
+.engineer-details h2 {
   font-size: 48px;
   margin: 0px;
   line-height: 60px;
 }
 
-.course-details h3 {
+.engineer-details h3 {
   margin: 0px;
 }
 
-.course-details p {
+.engineer-details p {
   line-height: 18px;
 }
 
-.student-details {
+.machine-details {
   margin: 0px 0px 25px 0px;
   overflow: scroll;
   max-height: 300px;
 }
 
-.student-details .col-md-3 {
+.machine-details .col-md-3 {
   border-color: rgb(238, 238, 238);
   border-style: solid;
   border-width: 3px;
   padding: 20px;
 }
 
-.student-details .col-md-3:nth-of-type(even) {
+.machine-details .col-md-3:nth-of-type(even) {
   background-color: #fff;
 }
 
-.student-details .col-md-3:nth-of-type(even):hover {
+.machine-details .col-md-3:nth-of-type(even):hover {
   background-color: rgb(182, 182, 182);
 }
 
-.student-details .col-md-3:nth-of-type(odd) {
+.machine-details .col-md-3:nth-of-type(odd) {
   background-color: rgb(182, 182, 182);
 }
-.student-details .col-md-3:nth-of-type(odd):hover {
+.machine-details .col-md-3:nth-of-type(odd):hover {
   background-color: #fff;
 }
 
-.student-details h2,
-.student-details h3 {
+.machine-details h2,
+.machine-details h3 {
   margin: 0px;
 }
 
-.student-details h4 {
+.machine-details h4 {
   color: #fff;
   text-transform: uppercase;
   font-size: 36px;
@@ -119,15 +119,15 @@ main {
   padding: 15px;
 }
 
-.student-details .col-md-3 h2 span.content,
-.student-details .col-md-3 h3 span.content {
+.machine-details .col-md-3 h2 span.content,
+.machine-details .col-md-3 h3 span.content {
   font-weight: 700;
   font-size: 24px;
   text-align: right;
 }
 
-.student-details .col-md-3 h2 span.title,
-.student-details .col-md-3 h3 span.title {
+.machine-details .col-md-3 h2 span.title,
+.machine-details .col-md-3 h3 span.title {
   text-transform: uppercase;
   font-size: 16px;
   text-align: left;
